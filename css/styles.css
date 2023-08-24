@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600');
+@import url('https://fonts.googleapis.com/css?family=Pacifico:400');
+
+* {
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #777;
+  color: #ddd;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  user-select: none;
+  height: 100vh;
+}
+
+div {
+
+}
+
+a {
+  position: absolute;
+  top: 5px;
+  right: 32px;
+  font-family: 'Pacifico', sans-serif;
+  font-size: 22px;
+  font-style: italic;
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  color: #ff8a8a;
+}
+
+#drum_machine_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#drum-machine {
+  position: relative;
+  width: 516px;
+  box-shadow: 2px 2px 2px #222, 0 0 2px #4f4f4f;
+  border-radius: 5px;
+  border: 2px solid #888;
+}
+
+#pads-panel {
+  display: inline-block;
+  margin: 48px 20px 20px 20px;
+  width: 268px;
+}
+
+.drum-pad {
+  width: 80px;
+  height: 64px;
+  margin: 4px;
+  padding: 16px;
+  float: left;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ddd;
+  background-color: #aaa;
+  border: 1px solid #bfbfbf;
+  box-shadow: 2px 2px 2px #222, 0 0 2px #4f4f4f;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#control-panel {
+  display: inline-block;
+  width: 180px;
+  margin-top: 52px;
+  vertical-align: top;
+}
+
+#display {
+  padding: 20px;
+  height: 70px;
+  color: #222;
+  background-color: #555;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1.2em;
+  border: 2px solid #444;
+}
+
+#volume {
+  display: inline;
+  margin-left: 10%;
+  height: 70px;
+  width: 80%;
+  background: red;
+  cursor: pointer;
+}
+
+#power {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4px;
+  padding: 16px;
+  color: #333;
+  background-color: #777;
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  border: 2px solid #888;
+  border-radius: 5px;
+  box-shadow: 0 0 2px #222, 3px 3px 4px #4f4f4f;
+  cursor: pointer;
+}
+
+#led {
+  margin-left: 20px;
+  width: 12px;
+  height: 12px;
+  background-color: #733;
+  border-radius: 50%;
+  border: 2px solid #522;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  cursor: pointer;
+  height: 6px;
+  box-shadow: 0px 0px 4px #000000;
+  background: #555;
+  border-radius: 25px;
+  border: 1px solid #8A8A8A;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 2px #222;
+  border: 1px solid #8A8A8A;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: -5px;
+  color: #222;
+}
