@@ -3,15 +3,15 @@
 const e = React.createElement;
 
 const PADS = [
-  {key: 'Q', name: 'Heater 1', src: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3'},
-  {key: 'W', name: 'Heater 2', src: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3'},
-  {key: 'E', name: 'Heater 3', src: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3'},
-  {key: 'A', name: 'Heater 4', src: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3'},
+  {key: 'Q', name: 'Heater1', src: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3'},
+  {key: 'W', name: 'Heater2', src: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3'},
+  {key: 'E', name: 'Heater3', src: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3'},
+  {key: 'A', name: 'Heater4', src: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3'},
   {key: 'S', name: 'Clap',     src: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3'},
-  {key: 'D', name: 'Open HH',  src: 'https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3'},
-  {key: 'Z', name: 'Kick & Hat', src: 'https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3'},
+  {key: 'D', name: 'OpenHH',  src: 'https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3'},
+  {key: 'Z', name: 'Kick_n_Hat', src: 'https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3'},
   {key: 'X', name: 'Kick',     src: 'https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3'},
-  {key: 'C', name: 'Closed HH',src: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'}
+  {key: 'C', name: 'ClosedHH',src: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'}
 ];
 
 const PAD_OFF = {};
@@ -71,7 +71,7 @@ class DrumPad extends React.Component {
   render() {
     return e(
       'div',
-      { className: 'drum-pad', onClick: this.play, style: this.state.padStyle },
+      { id:this.sample.name, className: 'drum-pad', onClick: this.play, style: this.state.padStyle },
       this.audio, this.sample.key
     );
   }
